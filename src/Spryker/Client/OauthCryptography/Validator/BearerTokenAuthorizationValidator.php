@@ -50,11 +50,6 @@ class BearerTokenAuthorizationValidator implements BearerTokenAuthorizationValid
         return $verifiedRequest;
     }
 
-    /**
-     * @param \League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface $accessTokenRepository
-     *
-     * @return \League\OAuth2\Server\AuthorizationValidators\AuthorizationValidatorInterface
-     */
     protected function createBearerTokenValidator(AccessTokenRepositoryInterface $accessTokenRepository): AuthorizationValidatorInterface
     {
         return new BearerTokenValidator($accessTokenRepository);

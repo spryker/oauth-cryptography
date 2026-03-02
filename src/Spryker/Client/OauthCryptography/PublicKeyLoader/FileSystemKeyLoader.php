@@ -17,9 +17,6 @@ class FileSystemKeyLoader implements FileSystemKeyLoaderInterface
      */
     protected $oauthCryptographyConfig;
 
-    /**
-     * @param \Spryker\Client\OauthCryptography\OauthCryptographyConfig $oauthCryptographyConfig
-     */
     public function __construct(OauthCryptographyConfig $oauthCryptographyConfig)
     {
         $this->oauthCryptographyConfig = $oauthCryptographyConfig;

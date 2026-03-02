@@ -18,17 +18,11 @@ use Spryker\Client\OauthCryptography\Validator\BearerTokenAuthorizationValidator
  */
 class OauthCryptographyFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\OauthCryptography\PublicKeyLoader\FileSystemKeyLoaderInterface
-     */
     public function createFileSystemKeyLoader(): FileSystemKeyLoaderInterface
     {
         return new FileSystemKeyLoader($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Client\OauthCryptography\Validator\BearerTokenAuthorizationValidatorInterface
-     */
     public function createBearerTokenAuthorizationValidator(): BearerTokenAuthorizationValidatorInterface
     {
         return new BearerTokenAuthorizationValidator();

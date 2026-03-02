@@ -39,9 +39,6 @@ class OauthCryptographyClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testLoadPublicKeysWillLoadDefaultSshKey(): void
     {
         // Arrange
@@ -59,9 +56,6 @@ class OauthCryptographyClientTest extends Unit
         $this->assertEquals($expectedKeys, $actualKeys);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAuthorizationWillCallLeagueValidator(): void
     {
         // Arrange
@@ -86,9 +80,6 @@ class OauthCryptographyClientTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testValidateAuthorization(): void
     {
         // Arrange
@@ -128,9 +119,6 @@ class OauthCryptographyClientTest extends Unit
         $this->assertArrayHasKey('oauth_scopes', $expectedAttributes);
     }
 
-    /**
-     * @return string
-     */
     protected function getPathToSshKey(): string
     {
         return APPLICATION_ROOT_DIR . '/config/Zed/dev_only_public.key';
