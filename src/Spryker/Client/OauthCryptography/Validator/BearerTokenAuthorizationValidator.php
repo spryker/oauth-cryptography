@@ -38,7 +38,7 @@ class BearerTokenAuthorizationValidator implements BearerTokenAuthorizationValid
                     $bearerTokenValidator->setPublicKey($publicKey);
                 }
                 $verifiedRequest = $bearerTokenValidator->validateAuthorization($request);
-            } catch (OAuthServerException $OAuthServerException) {
+            } catch (OAuthServerException $oauthServerException) {
                 continue;
             }
         }
